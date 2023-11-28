@@ -1,0 +1,34 @@
+quarkus:
+  http:
+    port: 8093
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: admin
+    reactive:
+      url: vertx-reactive:postgresql://localhost:5432/postgres
+  hibernate-orm:
+    database:
+      generation: update
+
+  rest-client:
+    viacep:
+      url: https://viacep.com.br/ws/
+
+kafka:
+  bootstrap:
+    servers: localhost:9092
+mp:
+  messaging:
+    outgoing:
+      address-out:
+        connector: smallrye-kafka
+        topic: "address"
+        value:
+          serializer: org.apache.kafka.common.serialization.StringSerializer
+    incoming:
+      address-in:
+        connector: smallrye-kafka
+        topic: "address"
+        value:
+          deserializer: org.apache.kafka.common.serialization.StringDeserializer
