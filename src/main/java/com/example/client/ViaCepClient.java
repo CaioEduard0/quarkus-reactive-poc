@@ -10,6 +10,6 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 public interface ViaCepClient {
 
     @GET
-    @Path("{cep}/json/")
+    @Path("{cep}")
     Uni<Address> fetchAddress(final String cep);
 }

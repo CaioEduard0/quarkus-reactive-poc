@@ -1,1 +1,1 @@
-Poc to test reactive Quarkus performance with Apache JMeter.
+Poc to test Quarkus Reactive performance with Apache JMeter.

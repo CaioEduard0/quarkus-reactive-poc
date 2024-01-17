@@ -13,7 +13,8 @@ quarkus:
 
   rest-client:
     viacep:
-      url: https://viacep.com.br/ws/
+      url: https://opencep.com/v1/
+#      url: http://localhost:8085/
 
 kafka:
   bootstrap:
